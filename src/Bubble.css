@@ -1,0 +1,22 @@
+.bubble-container {
+  height: 45vh;
+  background-color: rgb(195, 161, 161);
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  margin: 15px;
+}
+
+.bubble-input {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  width: 500px;
+  justify-content: center;
+  margin: auto;
+}
+
+.bubble-container .result-container {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  margin: 1px;
+}

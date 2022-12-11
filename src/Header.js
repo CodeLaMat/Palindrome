@@ -4,7 +4,7 @@ import "./Header.css";
 const Header = () => {
   return (
     <header className="header">
-      <h1>Check Palindrome word</h1>
+      <h1>Sorting Tasks</h1>
     </header>
   );
 };

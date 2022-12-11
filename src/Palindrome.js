@@ -1,4 +1,5 @@
 import React, { useMemo, useState, useRef } from "react";
+import "./Palindrome.css";
 
 function Main() {
   const [word, setWord] = useState("");
@@ -6,9 +7,14 @@ function Main() {
   const isPalindrome = useMemo(() => {
     return word === word.split("").reverse().join("");
   }, [word]);
+
   return (
-    <div className="Main">
-      <form>
+    <div className="palindrome_container">
+      <div>
+        {" "}
+        <h2>Check Palindrome word</h2>
+      </div>
+      <form className="form-palindrome">
         <div>
           <label>Word to check</label>
         </div>

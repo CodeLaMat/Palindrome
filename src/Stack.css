@@ -1,0 +1,33 @@
+.stack-container {
+  height: 45vh;
+  background-color: rgb(195, 161, 161);
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  margin: 15px;
+}
+.result-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.stack-result {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  background-color: #343833;
+  margin: 5px;
+}
+
+.stack-info {
+  display: grid;
+  justify-content: center;
+}
+
+.stack-info p {
+  display: flex;
+  justify-content: left;
+}

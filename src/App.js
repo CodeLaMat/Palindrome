@@ -1,13 +1,22 @@
 import "./App.css";
 
 import Header from "./Header";
-import Main from "./Main";
+import Palindrome from "./Palindrome";
+import Bubble from "./Bubble.js";
+import Stack from "./Stack.js";
+import Queue from "./Queue";
 
 const App = () => {
   return (
-    <div className="App">
-      <Header />
-      <Main />
+    <div>
+      {" "}
+      <Header className="header-component" />
+      <div className="App">
+        <Palindrome className="palindrome-component" />
+        <Bubble className="bubble-component" />
+        <Stack className="stack-component" />
+        <Queue className="queue-component" />
+      </div>
     </div>
   );
 };

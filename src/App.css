@@ -1,6 +1,14 @@
 * {
   box-sizing: border-box;
 }
+.App {
+  height: 100vh;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 2fr 2fr;
+  grid-template-rows: 2fr 2fr;
+  text-align: center;
+}
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -10,19 +18,23 @@ body {
   background-color: rgb(117, 125, 125);
   color: white;
 }
-.App {
-  text-align: center;
+
+button {
+  font: inherit;
+  background: rgb(137, 154, 154);
+  color: white;
+  padding: 0, 5rem;
+  margin: 1rem 1rem;
+  border-radius: 2px;
+  width: 80px;
 }
 
-form {
-  display: grid;
-  grid-template-columns: 2fr 2fr;
-  width: 500px;
-  align-items: center;
-  justify-content: center;
-  margin: auto;
+button:hover,
+button:active {
+  background-color: rgb(46, 57, 53);
+  border-color: antiquewhite;
 }
 
-.result {
-  margin-top: 20px;
+button:focus {
+  outline: none;
 }
