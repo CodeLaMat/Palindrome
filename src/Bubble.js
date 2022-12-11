@@ -27,7 +27,7 @@ function BubbleSort() {
 
   // Main bubble sort function
   function sort() {
-    const arr = [...numbers]; // Create a copy of the numbers array
+    const arr = [...numbers];
     let swapped;
     do {
       swapped = false;
