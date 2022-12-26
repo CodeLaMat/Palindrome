@@ -5,7 +5,7 @@ function Main() {
   const [word, setWord] = useState("");
   const wordRef = useRef();
   const isPalindrome = useMemo(() => {
-    return word === word.split("").reverse().join("");
+    return word === word.split("").reverse().join("").replace(/\D/g, "");
   }, [word]);
 
   return (
