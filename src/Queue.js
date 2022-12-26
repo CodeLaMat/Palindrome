@@ -22,13 +22,13 @@ export default function Stack() {
         })}
       </div>
       <div>
-        <button onClick={addToStack}>Push</button>
+        <button onClick={addToStack}>Enqueue</button>
         <button onClick={dequeue} warning>
-          Shift
+          Dequeue
         </button>
       </div>
       <div className="stack-info">
-        <p>Top Element : {peek()}</p>
+        <p>Top dequeued elements : {peek()}</p>
 
         <p>Stack Size : {length}</p>
       </div>
