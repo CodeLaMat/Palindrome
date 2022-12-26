@@ -27,7 +27,7 @@ function BubbleSort() {
     arr[j] = temp;
   }
 
-  // // Main bubble sort function
+  // Main bubble sort function
   function sort() {
     const arr = numbers.filter(function (value) {
       return !Number.isNaN(value);
@@ -44,10 +44,6 @@ function BubbleSort() {
     } while (swapped);
     setSortedNumbers(arr); // Update the state with the sorted array
   }
-
-  const newSortedNumbers = sortedNumbers.filter(function (value) {
-    return !Number.isNaN(value);
-  });
 
   return (
     <div className="bubble-container">
@@ -76,7 +72,7 @@ function BubbleSort() {
         <div className="result-container">
           <p>Unsorted numbers: {numbers.join(", ")}</p>
 
-          <p>Sorted numbers: {newSortedNumbers.join(", ")}</p>
+          <p>Sorted numbers: {sortedNumbers.join(", ")}</p>
         </div>
       </form>
     </div>
