@@ -3,16 +3,18 @@ import "./Bubble.css";
 
 function BubbleSort() {
   const [numbers, setNumbers] = useState([]);
+  const [sortedNumbers, setSortedNumbers] = useState([]);
 
-  //Function for handling the input
-  function addHandler(e) {
-    e.preventDefault();
-    const form = e.target;
-    const input = form.querySelector("input");
-    const value = input.value.replace(/\D/g, "");
-    setNumbers((numbers) => [value, ...numbers]);
+  function handleSubmit(event) {
+    event.preventDefault();
+    const form = event.target;
+    const number = parseInt(event.target.elements.number.value, 10);
+    setNumbers([...numbers, number]);
     form.reset();
   }
+
+  console.log(numbers);
+
   // reseting function to clean the array
   function resetHandler() {
     numbers.length = 0;
@@ -25,9 +27,11 @@ function BubbleSort() {
     arr[j] = temp;
   }
 
-  // Main bubble sort function
+  // // Main bubble sort function
   function sort() {
-    const arr = [...numbers];
+    const arr = numbers.filter(function (value) {
+      return !Number.isNaN(value);
+    });
     let swapped;
     do {
       swapped = false;
@@ -38,12 +42,16 @@ function BubbleSort() {
         }
       }
     } while (swapped);
-    setNumbers(arr); // Update the state with the sorted array
+    setSortedNumbers(arr); // Update the state with the sorted array
   }
+
+  const newSortedNumbers = sortedNumbers.filter(function (value) {
+    return !Number.isNaN(value);
+  });
 
   return (
     <div className="bubble-container">
-      <form onSubmit={addHandler}>
+      <form onSubmit={handleSubmit}>
         <div>
           {" "}
           <h2>Bubble sorting</h2>
@@ -53,7 +61,7 @@ function BubbleSort() {
             <label>Please insert numbers:</label>
           </div>
           <div>
-            <input type="numbers" />{" "}
+            <input type="text" name="number" />
           </div>
         </div>
         <button type="submit" onClick={resetHandler}>
@@ -68,7 +76,7 @@ function BubbleSort() {
         <div className="result-container">
           <p>Unsorted numbers: {numbers.join(", ")}</p>
 
-          <p>Sorted numbers: {numbers.join(", ")}</p>
+          <p>Sorted numbers: {newSortedNumbers.join(", ")}</p>
         </div>
       </form>
     </div>
